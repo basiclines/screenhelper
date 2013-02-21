@@ -1,9 +1,10 @@
 {
   "name": "Screen helper",
-  "description": "A webapp application that gives some basic information about the device screen",
+  "description": "A webapp that gives some basic information about the device screen",
   "launch_path": "app.html",
   "icons": {
-    "120": "gphx/icons/appicon.png"
+    "120": "gphx/icons/appicon.png",
+    "60": "gphx/icons/appicon.png"
   },
   "developer": {
     "name": "Ismael Gonzalez - @basiclines",
