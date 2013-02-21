@@ -1,0 +1,33 @@
+/*  Main UI declaration */
+body,
+html {
+	height: 100%;
+	overflow: hidden;
+	margin: 0;
+	padding: 0;
+	font: 10px/1em "MozTT", Sans-serif;
+}
+
+/* Hidden elements */
+.hidden { display: none!important; }
+
+body[data-sidebar="on"] .wrapper { transform: translateX(calc(100% - 6.5rem)); }
+
+/* Header basics */
+.header {
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+}
+
+
+
+
+
+
+
+
+
+
+

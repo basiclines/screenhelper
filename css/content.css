@@ -1,0 +1,76 @@
+/* List view */
+.list { }
+	.list aside.pack-end { text-align: center; }
+		.list aside:before {
+			content: "";
+			width: 1px;
+			height: 100%;
+			display: inline-block;
+			vertical-align: middle;
+		}
+		.list aside strong {
+			font-size: 2.4rem;
+			font-weight: 400;
+			text-align: center;
+			display: inline-block;
+			vertical-align: middle;
+			padding: 1.5rem 0.8rem 1rem;
+			min-width: 2.5rem;
+			background: #f5f5f5;
+			border-radius: 0.3rem;
+			border: solid 0.1rem #e8e8e8;
+		}
+
+/* Matching */
+.list li[data-match] { display: none; }
+
+@media all and (min--moz-device-pixel-ratio: 1),
+				(-webkit-min-device-pixel-ratio: 1),
+				(min-resolution: 1dppx) {
+	.list li[data-match="dppx-1"] { display: block; }
+}
+
+@media all and (min--moz-device-pixel-ratio: 1.25),
+				(-webkit-min-device-pixel-ratio: 1.25),
+				(min-resolution: 1.25dppx) {
+	.list li[data-match="dppx-1.25"] { display: block; }
+}
+
+@media all and (min--moz-device-pixel-ratio: 1.5),
+				(-webkit-min-device-pixel-ratio: 1.5),
+				(min-resolution: 1.5dppx) {
+	.list li[data-match="dppx-1.5"] { display: block; }
+}
+
+@media all and (min--moz-device-pixel-ratio: 1.75),
+				(-webkit-min-device-pixel-ratio: 1.75),
+				(min-resolution: 1.75dppx) {
+	.list li[data-match="dppx-1.75"] { display: block; }
+}
+
+@media all and (min--moz-device-pixel-ratio: 2),
+				(-webkit-min-device-pixel-ratio: 2),
+				(min-resolution: 2dppx) {
+	.list li[data-match="dppx-2"] { display: block; }
+}
+
+@media all and (min-resolution: 96dpi) {
+	.list li[data-match="dpi-96"] { display: block; }
+}
+
+@media all and (min-resolution: 120dpi) {
+	.list li[data-match="dpi-120"] { display: block; }
+}
+
+@media all and (min-resolution: 144dpi) {
+	.list li[data-match="dpi-144"] { display: block; }
+}
+
+@media all and (min-resolution: 168dpi) {
+	.list li[data-match="dpi-168"] { display: block; }
+}
+
+@media all and (min-resolution: 192dpi) {
+	.list li[data-match="dpi-192"] { display: block; }
+}
+

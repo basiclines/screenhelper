@@ -1,0 +1,96 @@
+/* List override shared/style_unstable/lists.css */
+.bb-list,
+.bb-list ul { padding: 0; }
+
+.bb-list li,
+.bb-list li a,
+.bb-list ul[data-type="edit"] li,
+.bb-list header { padding-left: 1.5rem; padding-right: 1.5rem; }
+
+	.bb-list ul[data-type="edit"] li[aria-disabled="true"] { -moz-transform: none; }
+		.bb-list li label input + span { left: 1.5rem;}
+		.bb-list li a { margin: 0 -1.5rem; }
+
+		.bb-list li aside { margin-left: -1.5rem }
+		.bb-list li aside.pack-end { margin-right: -1.5rem }
+			.bb-list li img[src=""] { background: rgba(0, 0, 0, 0.1); font-size: 0; }
+
+		.bb-list li aside button { margin-top: 1rem; padding: 0 1.5rem 0 1rem; }
+		.bb-list li aside select {
+			width: 100%;
+			height: 100%;
+			opacity: 0;
+			position: absolute;
+			left: 0;
+			top: 0;
+		}
+
+
+/* Tabs basics override shared/style_unstable/tabs.css */
+.bb-tabs { height: auto; position: absolute; bottom: 0; left: 0; right: 0; }
+
+
+/* Input areas override shared/style/input_areas.css */
+input[type="date"],
+input[type="time"] {
+  -moz-box-sizing: border-box;
+  display: block;
+  overflow: hidden;
+  width: 100%;
+  height: 4rem;
+  resize: none;
+  padding: 0 0.8rem;
+  font: 1.4rem/4rem "MozTT", Sans-serif;
+  border: 0.1rem solid #ccc;
+  border-radius: 0.3rem;
+  box-shadow: none; /* override the box-shadow from the system (performance issue) */
+  background: #fff url(../shared/style/input_areas/images/ui/shadow.png) repeat-x;
+}
+
+input[type="date"]::-moz-placeholder,
+input[type="time"]::-moz-placeholder {
+  color: #666;
+}
+
+.bb-form fieldset section input[type="date"],
+.bb-form fieldset section input[type="time"] {
+  height: 4rem;
+  border: none;
+  border-radius: 0;
+  background: none;
+  font-weight: 600;
+}
+
+.bb-form p { margin-bottom: 1rem; }
+.bb-form p input + button[type="reset"],
+.bb-form p textarea + button[type="reset"] {
+	pointer-events: auto;
+}
+
+.bb-form fieldset { position: relative; margin-bottom: 1.5rem; }
+.bb-form fieldset select { position: absolute; left: 0; top: 0; width: 9.5rem; height: 4rem; opacity: 0; }
+.bb-form fieldset p { margin: 0; }
+
+/* Seekbars override shared/style_unstable/seekbars.css */
+[role="slider"].bb-slider > div { padding-left: 1rem; padding-right: 1rem; }
+/*  conflict with switches */
+[role="slider"].bb-slider > label { width: auto; height: auto; }
+/*  conflict with buttons */
+[role="slider"].bb-slider button { padding: 0; left: 2rem; border: none; }
+
+
+/* Drawer override shared/style_unstable/drawer.css */
+section[role="region"] { left: auto; padding-left: 0; position: static; }
+	section[role="region"] > header:first-child { margin: 0; }
+		section[role="region"] > header:first-child > a { background-position: 2rem center; }
+		section[role="region"] > header:first-child > a span.icon.icon-menu { background-position: -1rem center; }
+			section[role="region"] > header:first-child > a .icon:after { width: 2rem; }
+		section[role="region"] > header:first-child h1 { margin-left: 3rem; }
+
+section[data-type="sidebar"] { width: calc(100% - 6.5rem); }
+	section[data-type="sidebar"] > header .icon.icon-add { background-image: url(../shared/style/headers/images/icons/add.png); }
+
+	section[role="region"].wrapper { position: relative; }
+		section[role="region"].header,
+		section[role="region"][data-viewport] { position: absolute; }
+
