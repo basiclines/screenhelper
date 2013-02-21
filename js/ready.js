@@ -3,12 +3,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
 	// Main wrappers
 	dom = document.body;
-	dom.sidebar = document.getElementById("sidebar");
 	dom.main = document.getElementById("main");
 	dom.views = document.getElementById("views");
 
 	// Auto views objects generator
-	// I.E: dom.view.list
+	// I.E: dom.view.features
 	dom.view = (function() {
 		var view = dom.views.querySelectorAll("[data-viewport]");
 		var obj = {};
