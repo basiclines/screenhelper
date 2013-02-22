@@ -5,6 +5,7 @@
 	overflow: hidden;
 	background: #fff;
 	transform: translate(0);
+	-webkit-transition: all 0.25s ease;
 }
 
 /* View positioning*/
@@ -23,7 +24,7 @@
 
 [data-viewport].active {
 	opacity: 1;
-	-moz-transform: translate(0) scale(1);
+	transform: translate(0) scale(1);
 	z-index: 1;
 	pointer-events: auto;
 }
@@ -35,15 +36,15 @@
 [data-viewport].fullscreen { top: 0; bottom: 0; z-index: 500; }
 
 /* top/bottom */
-[data-viewport="before"] { -moz-transform: translateY(-100%); }
-[data-viewport="after"] { -moz-transform: translateY(100%); }
+[data-viewport="before"] { transform: translateY(-100%); }
+[data-viewport="after"] { transform: translateY(100%); }
 
 /* left/right */
-[data-viewport="start"] { -moz-transform: translateX(-100%); }
-[data-viewport="end"] { -moz-transform: translateX(100%); }
+[data-viewport="start"] { transform: translateX(-100%); }
+[data-viewport="end"] { transform: translateX(100%); }
 
 /* behind/above */
 [data-viewport="behind"],
 [data-viewport="above"] { pointer-events: none; }
-[data-viewport="behind"] { -moz-transform: scale(0.5); }
-[data-viewport="above"] { -moz-transform: scale(1.5); }
+[data-viewport="behind"] { transform: scale(0.5); }
+[data-viewport="above"] { transform: scale(1.5); }

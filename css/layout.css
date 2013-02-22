@@ -11,7 +11,10 @@ html {
 /* Hidden elements */
 .hidden { display: none!important; }
 
-body[data-sidebar="on"] .wrapper { transform: translateX(calc(100% - 6.5rem)); }
+body[data-sidebar="on"] .wrapper {
+	-webkit-transform: translateX(80%);
+	transform: translateX(calc(100% - 6.5rem));
+}
 
 /* Header basics */
 .header {

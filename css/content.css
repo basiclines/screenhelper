@@ -1,3 +1,9 @@
+/* Sidebar */
+.sidebar li { font-size: 1.6rem; line-height: 5rem; overflow: hidden; padding: 0 2rem; }
+	.sidebar li label { float: right; z-index: 1; border-color: rgba(0, 0, 0, 0.6); }
+	.sidebar li label [data-type="switch"] + span { border-color: rgba(0, 0, 0, 0.3); }
+
+
 /* List view */
 .list { }
 	.list aside.pack-end { text-align: center; }

@@ -17,10 +17,30 @@ document.addEventListener("DOMContentLoaded", function () {
 		return obj;
 	})();
 
+	// Print screen information
 	var printers = dom.view.features.querySelectorAll("[data-exec]");
 	for ( var i = 0; i < printers.length; i++ ) {
 		printers[i].querySelector("strong").innerHTML = eval(printers[i].dataset.exec);
 	}
+
+	// Toggle Sidebar options
+	dom.toggleSidebar = dom.querySelector("[data-trigger=toggle-sidebar]")
+	dom.toggleSidebar.addEventListener("click", function(e) {
+		if ( dom.dataset.sidebar == "on" ) {
+			dom.dataset.sidebar = "";
+		} else {
+			dom.dataset.sidebar = "on";
+		}
+		e.preventDefault();
+	});
+
+	// Toggle viewport metatag
+	dom.toggleViewport = dom.querySelector("[data-trigger=toggle-viewport]")
+	dom.toggleViewport.addEventListener("change", function(e){
+		toggleViewport();
+	});
+
+
 
 
 

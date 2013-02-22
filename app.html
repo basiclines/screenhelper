@@ -5,6 +5,10 @@
 
 		<title>Screen helper</title>
 
+		<link rel="apple-touch-icon" href="gphx/icons/appicon@2x.png"/>
+		<meta name="apple-mobile-web-app-status-bar-style" content="default" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+
 		<!-- Shared CSS -->
 		<link rel="stylesheet" type="text/css" href="shared/style/headers.css">
 		<link rel="stylesheet" type="text/css" href="shared/style/buttons.css">
@@ -23,14 +27,32 @@
 		<link rel="stylesheet" type="text/css" href="css/views.css">
 		<link rel="stylesheet" type="text/css" href="css/content.css">
 
+		<script type="text/javascript" src="js/viewport.js"></script>
 		<script type="text/javascript" src="js/ready.js"></script>
 	</head>
 
 	<body>
 
+		<section id="sidebar" data-type="sidebar" class="sidebar">
+			<header>
+				<h1>Options</h1>
+			</header>
+			<nav>
+				<ul>
+					<li>
+						<label data-trigger="toggle-viewport">
+							<input type="checkbox" data-type="switch">
+							<span></span>
+						</label>
+						Viewport metatag
+					</li>
+				</ul>
+			</nav>
+		</section>
 
 		<section id="main" role="region" class="wrapper">
 			<header class="header">
+				<a href="#" data-trigger="toggle-sidebar"><span class="icon icon-menu">Menu</span></a>
 				<h1>Screen helper</h1>
 			</header>
 
