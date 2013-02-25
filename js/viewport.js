@@ -14,21 +14,16 @@ toggleViewport.add = function() {
 
 	localStorage.setItem("viewport", "true");
 	document.head.appendChild(viewportTag);
-	if ( dom ) {
-		dom.toggleViewport.checked = true
-	}
 }
 
 toggleViewport.remove = function() {
 		localStorage.setItem("viewport", "false");
 		var viewportTag = document.head.querySelector("[name=viewport]");
 		document.head.removeChild(viewportTag);
-		if ( dom ) {
-			dom.toggleViewport.checked = false
-		}
 }
 
+
 // Check on ready
-if ( localStorage.getItem("viewport") != "true" ) {
-	toggleViewport.remove();
+if ( localStorage.getItem("viewport") == "true" ) {
+	toggleViewport.add();
 }

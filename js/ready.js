@@ -6,6 +6,11 @@ document.addEventListener("DOMContentLoaded", function () {
 	dom.main = document.getElementById("main");
 	dom.views = document.getElementById("views");
 
+	// Triggers
+	dom.toggleViewport = dom.querySelector("[data-trigger=toggle-viewport]")
+	dom.toggleSidebar = dom.querySelector("[data-trigger=toggle-sidebar]")
+
+
 	// Auto views objects generator
 	// I.E: dom.view.features
 	dom.view = (function() {
@@ -24,7 +29,6 @@ document.addEventListener("DOMContentLoaded", function () {
 	}
 
 	// Toggle Sidebar options
-	dom.toggleSidebar = dom.querySelector("[data-trigger=toggle-sidebar]")
 	dom.toggleSidebar.addEventListener("click", function(e) {
 		if ( dom.dataset.sidebar == "on" ) {
 			dom.dataset.sidebar = "";
@@ -35,13 +39,15 @@ document.addEventListener("DOMContentLoaded", function () {
 	});
 
 	// Toggle viewport metatag
-	dom.toggleViewport = dom.querySelector("[data-trigger=toggle-viewport]")
 	dom.toggleViewport.addEventListener("change", function(e){
 		toggleViewport();
 	});
 
-
-
-
+	// Check on ready
+	if ( localStorage.getItem("viewport") == "true" ) {
+		dom.toggleViewport.checked = true;
+	} else {
+		dom.toggleViewport.checked = false;
+	}
 
 });
