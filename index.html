@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+
+		<title>Screen helper</title>
+
+		<script>
+		var isFFOS = (function(){
+			if (navigator.userAgent.search("Mozilla") != -1) {
+				if (navigator.userAgent.search("Mobile") != -1) {
+					return true
+				}
+			} else { return false };
+		})();
+		if ( isFFOS) {
+			document.addEventListener("DOMContentLoaded", function() {
+				var style =  document.createElement("link")
+				style.href= "shared/style/buttons.css";
+				style.rel = "stylesheet";
+				var installTrigger = document.createElement("button");
+				installTrigger.className = "recommend";
+				installTrigger.innerHTML = "Install app";
+				document.head.appendChild(style);
+				document.body.appendChild(installTrigger);
+
+				installTrigger.addEventListener("click", function(){
+					// This URL must be a full url.
+					var manifestUrl = 'build/package.manifest';
+					var req = navigator.mozApps.installPackage(manifestUrl);
+					req.onsuccess = function() {
+						alert(this.result.origin);
+					};
+					req.onerror = function() {
+						alert(this.error.name);
+					};
+				});
+
+			});
+
+		} else {
+			window.location.href = window.location.href+"app"
+		}
+
+		</script>
+	</head>
+
+	<body>
+
+
+
+	</body>
+</html>
+
+

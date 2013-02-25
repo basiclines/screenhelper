@@ -1,14 +1,15 @@
 {
   "name": "Screen helper",
   "description": "A webapp that gives some basic information about the device screen",
+  "package_path": "basiclines.github.com/screenhelper/build/package.zip",
   "launch_path": "app.html",
+  "version": "1.0",
   "icons": {
-    "120": "/gphx/icons/appicon.png",
-    "60": "/gphx/icons/appicon.png"
+  "120": "/gphx/icons/appicon.png",
+  "60": "/gphx/icons/appicon.png"
   },
   "developer": {
     "name": "Ismael Gonzalez - @basiclines",
     "url": "http://sweetbits.es"
-  },
-  "default_locale": "en"
+  }
 }
