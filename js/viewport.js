@@ -6,6 +6,7 @@ var toggleViewport = function() {
 	}
 	window.location.reload();
 }
+
 toggleViewport.add = function() {
 	var viewportTag = document.createElement("meta");
 	viewportTag.setAttribute("name", "viewport");
@@ -28,6 +29,6 @@ toggleViewport.remove = function() {
 }
 
 // Check on ready
-if ( localStorage.getItem("viewport") == "true" ) {
-	toggleViewport.add();
+if ( localStorage.getItem("viewport") != "true" ) {
+	toggleViewport.remove();
 }

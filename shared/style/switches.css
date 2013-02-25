@@ -70,6 +70,7 @@ label input[type="checkbox"][data-type="switch"] + span {
   background: url(switches/images/switch/handler.png) no-repeat -0.2rem center;
   background-size: auto calc(100% + 2px);
   transition: background 0.18s ease;
+  -webkit-transition: background 0.18s ease;
 }
 
 label input[data-type="switch"] + span:after,
@@ -81,6 +82,7 @@ label input[data-type="switch"] + span:before {
   width: 5.4rem;
   z-index: -1;
   transition: transform 0.2s ease;
+  -webkit-transition: transform 0.2s ease;
 }
 
 label input[data-type="switch"] + span:before {
@@ -93,6 +95,7 @@ label input[data-type="switch"] + span:after {
   left: 100%;
   background: #e6e6e6;
   transform: translateX(-5.4rem);
+  -webkit-transform: translateX(-5.4rem);
 }
 
 /* switch: disabled state */
@@ -119,9 +122,11 @@ label input[data-type="switch"]:checked + span {
 
 label input[data-type="switch"]:checked + span:before {
   transform: translateX(5.4rem);
+  -webkit-transform: translateX(5.4rem);
 }
 
 label input[data-type="switch"]:checked + span:after {
   transform: translateX(0);
+  -webkit-transform: translateX(0);
 }
 
