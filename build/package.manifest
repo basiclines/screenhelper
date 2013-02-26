@@ -1,5 +1,15 @@
 {
   "name": "Screen helper",
   "package_path": "http://basiclines.github.com/screenhelper/build/package.zip",
-  "version": "1.0"
+  "size": 472385,
+  "version": "1.0",
+  "release_notes": "",
+  "icons": {
+    "120": "/gphx/icons/appicon.png",
+    "60": "/gphx/icons/appicon.png"
+    },
+  "developer": {
+    "name": "Ismael Gonzalez - @basiclines",
+    "url": "http://sweetbits.es"
+  }
 }

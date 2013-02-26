@@ -14,29 +14,15 @@
 			} else { return false };
 		})();
 		if ( isFFOS) {
-			document.addEventListener("DOMContentLoaded", function() {
-				var style =  document.createElement("link")
-				style.href= "shared/style/buttons.css";
-				style.rel = "stylesheet";
-				var installTrigger = document.createElement("button");
-				installTrigger.className = "recommend";
-				installTrigger.innerHTML = "Install app";
-				document.head.appendChild(style);
-				document.body.appendChild(installTrigger);
-
-				installTrigger.addEventListener("click", function(){
-					// This URL must be a full url.
-					var manifestUrl = 'http://basiclines.github.com/screenhelper/build/package.manifest';
-					var req = navigator.mozApps.installPackage(manifestUrl);
-					req.onsuccess = function() {
-						alert(this.result.origin);
-					};
-					req.onerror = function() {
-						alert(this.error.name);
-					};
-				});
-
-			});
+			// This URL must be a full url.
+			var manifestUrl = 'http://basiclines.github.com/screenhelper/build/package.manifest';
+			var req = navigator.mozApps.installPackage(manifestUrl);
+			req.onsuccess = function() {
+				console.log(this.result.origin);
+			};
+			req.onerror = function() {
+				console.log(this.error.name);
+			};
 
 		} else {
 			window.location.href = window.location.href+"app"
