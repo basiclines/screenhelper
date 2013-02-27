@@ -1,4 +1,3 @@
-./build.sh
 cd ../
 echo "Deploying...."
 git checkout gh-pages
