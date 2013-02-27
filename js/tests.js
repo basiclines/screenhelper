@@ -5,8 +5,8 @@ function min_device_width() {
 		if (size) {
 			var size = window.matchMedia("(min-device-width: "+i+"px)").matches
 		} else {
-			var matchedSize = i;
-			i = 3001;
+			var matchedSize = i-2;
+			i = 3000;
 		}
 	}
 	return matchedSize;
