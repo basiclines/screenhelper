@@ -15,7 +15,9 @@
 		})();
 		if ( isFFOS) {
 			// This URL must be a full url.
+			// var manifestUrl = 'http://192.168.1.36/mozilla/apps/screenhelper/build/package.manifest';
 			var manifestUrl = 'http://basiclines.github.com/screenhelper/build/package.manifest';
+
 			var req = navigator.mozApps.installPackage(manifestUrl);
 			req.onsuccess = function() {
 				console.log(this.result.origin);
@@ -31,11 +33,7 @@
 		</script>
 	</head>
 
-	<body>
-
-
-
-	</body>
+	<body></body>
 </html>
 
 
