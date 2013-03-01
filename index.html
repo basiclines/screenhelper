@@ -6,14 +6,14 @@
 		<title>Screen helper</title>
 
 		<script>
-		var isFFOS = (function(){
-			if (navigator.userAgent.search("Mozilla") != -1) {
-				if (navigator.userAgent.search("Mobile") != -1) {
-					return true
-				}
-			} else { return false };
-		})();
-		if ( isFFOS) {
+		var isFFOS = function() {
+			if ("mozApps" in navigator && navigator.userAgent.search("Mobile") != -1) {
+				return true
+			} else {
+				return false
+			};
+		};
+		if ( isFFOS() ) {
 			// This URL must be a full url.
 			// var manifestUrl = 'http://192.168.1.36/mozilla/apps/screenhelper/build/package.manifest';
 			var manifestUrl = 'http://basiclines.github.com/screenhelper/build/package.manifest';
