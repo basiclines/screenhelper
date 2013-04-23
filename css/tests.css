@@ -1,6 +1,7 @@
 /* Matching */
 .list li[data-match] { display: none; }
 
+/* DPPX TEST */
 @media all and (min--moz-device-pixel-ratio: 1),
 				(-webkit-min-device-pixel-ratio: 1),
 				(min-resolution: 1dppx) {
@@ -43,6 +44,7 @@
 	.list li[data-match="dppx-2"] { display: block; }
 }
 
+/* DPI TEST */
 @media all and (min-resolution: 96dpi) {
 	.list li[data-match*="dpi-"] { display: none; }
 	.list li[data-match="dpi-96"] { display: block; }
@@ -73,3 +75,23 @@
 	.list li[data-match="dpi-192"] { display: block; }
 }
 
+/* DEVICE WIDTH TEST */
+@media all and (min-device-width: 320px) {
+	.list li[data-match*="mdw-"] { display: none; }
+	.list li[data-match="mdw-320"] { display: block; }
+}
+
+@media all and (min-device-width: 480px) {
+	.list li[data-match*="mdw-"] { display: none; }
+	.list li[data-match="mdw-480"] { display: block; }
+}
+
+@media all and (min-device-width: 540px) {
+	.list li[data-match*="mdw-"] { display: none; }
+	.list li[data-match="mdw-540"] { display: block; }
+}
+
+@media all and (min-device-width: 720px) {
+	.list li[data-match*="mdw-"] { display: none; }
+	.list li[data-match="mdw-720"] { display: block; }
+}
