@@ -6,17 +6,21 @@
 		<title>Screen helper</title>
 
 		<script>
-		var isFFOS = function() {
-			if ("mozApps" in navigator && navigator.userAgent.search("Mobile") != -1) {
-				return true
-			} else {
-				return false
-			};
-		};
-		if ( isFFOS() ) {
+		// Trun it to false to always install 'normal' package
+		var supportHIDPI = true;
+		var isFFOS = ("mozApps" in navigator && navigator.userAgent.search("Mobile") != -1);
+
+		if ( isFFOS ) {
+
 			// This URL must be a full url.
-			// var manifestUrl = 'http://192.168.1.36/mozilla/apps/screenhelper/build/package.manifest';
-			var manifestUrl = 'http://basiclines.github.io/screenhelper/build/package.manifest';
+			// var URL = 'http://192.168.1.101/mozilla/apps/screenhelper/build/';
+			var URL = 'http://basiclines.github.io/screenhelper/build/';
+
+			if ( window.devicePixelRatio > 1.2 && supportHIDPI ) {
+				var manifestUrl = URL+'package@2x.manifest';
+			} else {
+				var manifestUrl = URL+'package.manifest';
+			}
 
 			var req = navigator.mozApps.installPackage(manifestUrl);
 			req.onsuccess = function() {
