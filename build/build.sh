@@ -83,9 +83,12 @@ do
 done < "$TMP_PATHS"
 
 # Overwrites base files in package@2x.zip with the correct ones
-cd $TMP_HIDPI_DIR
-zip -r ../package@2x.zip *
-cd ..
+if [ "$1" == "$HIDPI" ];
+then
+	cd $TMP_HIDPI_DIR
+	zip -r ../package@2x.zip *
+	cd ..
+fi
 echo "Cleaning..."
 
 # Remove temporal folder
